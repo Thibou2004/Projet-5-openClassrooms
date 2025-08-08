@@ -1,0 +1,55 @@
+@use "../base/root";
+
+.l-home-content {
+    .l-section-with-background-image {
+    min-height: clamp(111px, 22.3vw, 223px);
+    background-image: url("/images/image-source-1.png");
+    width: 100%;
+    display: flex;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    align-items: center;
+    border-radius: 25px;
+    margin: 0px auto 43px;
+}
+
+h1 {
+    font-size: clamp(root.$fs-24, 4.8vw, root.$fs-48);
+    text-align: center;
+    width: 100%;
+    color: root.$white;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+}
+
+.l-home-gallery {
+    min-height: 829px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 340px);
+    background-color: root.$lightGray;
+    border-radius: 25px;
+    row-gap: 50px;
+    column-gap: 60px;
+    justify-content: center;
+    width: 100%;
+    padding: 50px;
+}
+
+@media (max-width: 768px) {
+    .l-home-gallery  {
+        grid-template-columns: 1fr;
+        min-height: 0px;
+        padding: 0px;
+        gap: 20px;
+        height: auto;
+        width: 100%;
+        margin: 0 auto;
+        background-color: root.$white;
+    }
+
+    h1 {
+        text-align: left;
+    }
+}

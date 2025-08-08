@@ -1,0 +1,32 @@
+@use "../base/root";
+
+.l-APropos-content {
+    margin-bottom: clamp(19px, 3.8vw, 38px);
+    .l-section-with-background-image {
+    min-height: clamp(111px, 22.3vw, 223px);
+    background-image: url("/images/image-source-2.png");
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    align-items: center;
+    border-radius: 25px;
+    margin: 0px auto clamp(19px, 3.8vw, 38px);
+    }
+
+    .l-collapse-container {
+        display: flex;
+        flex-direction: column;
+        gap: clamp(20px, 3vw, 30px);
+        width: 100%;
+        max-width: 1023px;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .l-APropos-content {
+        padding: 0 19.5px;
+    }
+}

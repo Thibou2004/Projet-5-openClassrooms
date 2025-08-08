@@ -1,0 +1,98 @@
+@use "../base/root";
+
+.c-collapse-element {
+    position: relative;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+}
+
+.c-collapse-content {
+  color: root.$black;
+  font-size: clamp(root.$fs-12, 1.8vw, root.$fs-18);
+  padding-right: 20px;
+  padding-left: 20px;
+  padding-bottom: 20px;
+  position: relative;
+
+  &.large {
+    padding-top: clamp(13px, 2.5vw, 25px);
+  }
+
+  &.medium {
+    padding-top: clamp(13px, 1.6vw, 16px);
+  }
+}
+
+.c-collapse {
+    background-color: root.$red;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 5px;
+    position: relative;
+    z-index: 1;
+
+    &.large {
+    //   height: clamp(30px, 5.4vw, 54px);
+      height: 54px;
+      padding-left: 15px;
+      padding-right: 21px;
+    }
+
+    &.medium {
+    //   height: clamp(30px, 5.2vw, 52px);
+      height: 52px;
+      padding-left: 10px;
+      padding-right: 20px;
+    }
+
+    h2 {
+      color: root.$white;
+      font-weight: root.$bold;
+    }
+
+    &.large h2 {
+       font-size: clamp(root.$fs-13, 2.4vw, root.$fs-24);
+    }
+
+    &.large h2 {
+        font-size: clamp(root.$fs-13, 1.8vw, root.$fs-18);
+    }
+}
+
+.c-collapse-btn {
+    width: clamp(16px, 2.4vw, 24px);
+    height: clamp(9.14px, 1.371vw , 13.71px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+    position: relative;
+    transition: transform 0.3s linear;
+    
+    &.open {
+      transform: rotate(-180deg);
+    }
+
+    img {
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .c-collapse {
+        &.large, &.medium {
+            height: 30px;
+        }
+    }
+
+    .c-collapse-element {
+        &.close.large, &.close.medium {
+            max-height: 30px;
+        }
+    }
+}

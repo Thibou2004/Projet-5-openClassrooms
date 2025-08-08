@@ -1,0 +1,19 @@
+@use "../base/root";
+
+footer {
+    background-color: root.$black;
+    padding-top: 66px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 209px;
+    p {
+        font-size: clamp(root.$fs-12, 2.4vw, root.$fs-24);
+        color: root.$white;
+    }
+    
+    img {
+        margin-bottom: 28.56px;
+    }
+}
+

@@ -1,0 +1,42 @@
+@use "sass:math";
+
+// Font family
+$montserrat: 'Montserrat', sans-serif;
+
+
+
+// Font size
+@function px-to-rem($value) {
+    @return math.div($value, 16) + rem;
+}
+
+$fs-10: px-to-rem(10);
+$fs-12: px-to-rem(12);
+$fs-13: px-to-rem(13);
+$fs-14: px-to-rem(14);
+$fs-18: px-to-rem(18);
+$fs-24: px-to-rem(24);
+$fs-36: px-to-rem(36);
+$fs-48: px-to-rem(48);
+$fs-96: px-to-rem(96);
+$fs-228: px-to-rem(228);
+
+
+
+// Font weight 
+$regular: 400;
+$medium: 500;
+$bold: 700;
+
+// Line height
+
+$lh-142: 1.426;
+
+
+//  colors  
+$black: #000;
+$white: #fff;
+$grey: #666;
+$light-grey: #e3e3e3;
+$lightGray: #f6f6f6;
+$red: #ff6060;

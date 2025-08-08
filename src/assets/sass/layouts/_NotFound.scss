@@ -1,0 +1,36 @@
+@use "../base/root";
+
+.l-notFound-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 139px;
+    margin-bottom: 139px;
+
+    h1 {
+        color: root.$red;
+        font-size: clamp(root.$fs-96, 22.8vw, root.$fs-228);
+        max-height: 263px;
+    }
+}
+
+.l-notFound-description {
+    font-size: clamp(root.$fs-18, 3.6vw, root.$fs-36);
+    color: root.$red;
+    text-align: center;
+}
+
+.l-notFound-content a{
+    font-size: clamp(root.$fs-14, 1.8vw, root.$fs-18);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    text-decoration-thickness: 0.08em;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .l-notFound-content {
+        gap: 113px;
+        margin-bottom: 113px;
+    }
+}

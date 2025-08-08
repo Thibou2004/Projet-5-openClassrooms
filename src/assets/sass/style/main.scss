@@ -1,0 +1,48 @@
+@use "../base";
+@use "../layouts";
+@use "../compenents";
+
+body {
+    line-height: base.$lh-142;
+    font-family: base.$montserrat;
+    font-size: base.$fs-14;
+}
+
+main {
+  padding: 0 100px;
+  margin-bottom: 50px;
+}
+
+header {
+    margin: 45px 0 50px;
+    padding: 0 100px;
+}
+
+.NotFoundHeader {
+    margin: 40px 0 139px;
+}
+
+.AProposHeader {
+    margin: 40px 0 38px;
+}
+
+@media (max-width: 768px) {
+    header {
+        padding: 0 20px;
+        margin: 20px 0 27px;
+    }
+
+    .NotFoundHeader {
+        margin: 20px 0 113px;
+    }
+
+    .AProposHeader {
+        margin: 20px 0 19px;
+        padding: 0 19.5px;
+    }
+
+    main {
+        padding: 0px 20px;
+        margin-bottom: 27px;
+    }
+}

@@ -1,0 +1,181 @@
+@use "../base/root";
+
+.l-carrousel {
+    position: relative;
+    width: 100%;
+    height: clamp(255px, 41.5vw, 415px);
+    border-radius: 25px;
+    overflow: hidden;
+
+    img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .arrow {
+        position: absolute;
+        top: 50%;
+        width: clamp(12px, 4.7vw, 47px);
+        height: clamp(12px, 7.9vw, 79px);
+        justify-content: center;
+        align-items: center;
+        transform: translateY(-50%);
+        border: none;
+        z-index: 1;
+        background-color: transparent;
+        cursor: pointer;
+    }
+
+    .arrow img {
+        pointer-events: none;
+    }
+
+    .leftArrow {
+        left: 23.36px;
+    }
+
+    .rightArrow {
+        right: 23.36px;
+    }
+
+    .l-indexes {
+        position: absolute;
+        z-index: 1;
+        bottom: 24.92px;
+        left: 50%;
+        color: root.$white;
+        font-size: root.$fs-18;
+        font-weight: root.$medium;
+        transform: translateX(-50%);
+    }
+}
+
+
+.l-fiche-logement-content {
+    .l-rating {
+      font-size: clamp(root.$fs-13, 2.4vw, root.$fs-24);
+      display: flex;
+      gap: clamp(10px, 2vw, 20px);
+    }
+
+    .red-star {
+        color: root.$red;
+    }
+
+    .grey-star {
+        color: root.$light-grey;
+    }
+    
+    h1 {
+        font-size: clamp(root.$fs-18, 3.6vw, root.$fs-36);
+        font-weight: root.$medium;
+        color: root.$red;
+    }
+
+    .l-logement-location {
+        font-size: clamp(root.$fs-14, 1.8vw, root.$fs-18);
+        margin-bottom: clamp(10px, 2vw, 20px);
+        font-weight: root.$medium;
+    }
+
+    .l-tags-list {
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+    }
+
+    .l-tag {
+        width: max-content;
+        padding: 0 15px;
+        min-width: clamp(84px, 11.5vw, 115px);
+        height: clamp(18px, 2.5vw, 25px);
+        border-radius: clamp(5px, 1.0vw, 10px);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: root.$red;
+        font-weight: root.$bold;
+        font-size: clamp(root.$fs-10, 1.4vw, root.$fs-14);
+        color: root.$white;
+    }
+
+    .l-profile-picture {
+        width: clamp(32px, 6.4vw, 64px);
+        height: clamp(32px, 6.4vw, 64px);
+        border-radius: 50%;
+    }
+
+    .l-profile-name {
+        font-size: clamp(root.$fs-12, 1.8vw, root.$fs-18);
+        color: root.$red;
+        font-weight: root.$medium;
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+    }
+
+    .l-logement-container {
+        display: flex;
+        justify-content: space-between;
+        margin: 30px auto 24px;
+    }
+
+    .l-item-logement-container:nth-of-type(2) {
+        display: flex;
+        align-items: end;
+        flex-direction: column;
+        gap: 21px;
+        width: 100%;
+        max-width: 196px;
+    }
+
+    .l-profile-content {
+        display: flex;
+        gap: 10px;
+    }
+
+    .l-collapse-container {
+        display: flex;
+        gap: 76px;
+        width: 100%;
+    }
+
+    .l-collapse-container div {
+        flex-shrink: 1;
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .l-indexes {
+        display: none;
+    }
+
+    .l-fiche-logement-content {
+        h1 {
+            margin-bottom: 5px;
+        }
+
+        .l-logement-container {
+            flex-direction: column;
+            justify-content: start;
+            gap: 16px;
+        }
+
+        .l-item-logement-container:nth-of-type(2) {
+            flex-direction: row-reverse;
+            justify-content: space-between;
+            align-items: center;
+            max-width: none;
+        }
+
+        .l-collapse-container {
+            flex-direction: column;
+            gap: 20px;
+        }
+    }
+}

@@ -1,0 +1,61 @@
+@use "../base/root";
+
+.c-announcement-card {
+    aspect-ratio: 1/1;
+    border-radius: 10px;
+    position: relative;
+    margin: 0px;
+    background-color: root.$red;
+    height: 100%;
+
+    img {
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 1/1;
+    position: relative;
+    border-radius: 10px;
+    object-fit: cover;
+    }
+
+   figcaption {
+    position: absolute;
+    z-index: 1;
+    font-size: root.$fs-18;
+    font-weight: root.$bold;
+    color: root.$white;
+    left: 20px;
+    bottom: 20px;
+    min-height: 52px;
+   }
+}
+
+.c-announcement-card::after {
+  content: "";
+  display: block;
+  position: absolute;
+  z-index: 0;
+  background: 
+  linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(10, 10, 10, 0) 42%,
+    rgba(4, 4, 4, 0.41) 100%,
+    rgba(0, 0, 0, 1) 100%
+  );
+  border-radius: 10px;
+  top: 0%;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+}
+
+@media (max-width: 768px) {
+    a:has(.c-announcement-card) {
+      max-width: 335px;
+      width: 100%;
+      margin: 0 auto;
+    }
+    figure {
+      width: 100%;
+    }
+}

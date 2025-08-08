@@ -1,0 +1,24 @@
+@use "../base/root";
+
+.c-link-navigation {
+    font-size: clamp(root.$fs-12, 2.4vw ,root.$fs-24);
+    line-height: root.$lh-142;
+    text-decoration: none;
+    font-weight: root.$medium;
+    font-family: root.$montserrat;
+    color: root.$black;
+}
+
+.c-link-navigation.active {
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    text-decoration-thickness: 0.08em;
+}
+
+.c-link-navigation:first-of-type {
+   margin-right: 26px;
+}
+
+// @media (max-width: 768px) {
+
+// }
